@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistem Mitigasi Bencana Desa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">SISTEM MITIGASI BENCANA DESA</h1>
+      <nav class="main-nav">
+        <a href="#home">Beranda</a>
+        <a href="#map">Peta Rawan Bencana</a>
+        <a href="#edu">Edukasi & Pelatihan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>Waspadai potensi bencana di lingkungan Anda</h2>
+          <p>Dapatkan informasi terkini terkait potensi bencana - banjir, longsor, atau gempa yang mungkin terjadi di desa Anda.</p>
+          <div class="hero-actions">
+            <button id="reportBtn" class="btn primary">LAPOR BENCANA</button>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <!-- stylized landscape with alert -->
+          <svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#67c2ff"/>
+                <stop offset="1" stop-color="#69a6d6"/>
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#g)"/>
+            <!-- hills -->
+            <ellipse cx="330" cy="220" rx="320" ry="120" fill="#3fa07a" opacity="0.9"/>
+            <ellipse cx="150" cy="210" rx="160" ry="80" fill="#478f6b"/>
+            <!-- houses -->
+            <rect x="370" y="160" width="70" height="50" rx="6" fill="#fff"/>
+            <polygon points="370,160 405,135 440,160" fill="#e05b4f"/>
+            <rect x="430" y="170" width="60" height="40" rx="6" fill="#fff"/>
+            <polygon points="430,170 460,150 490,170" fill="#e05b4f"/>
+            <rect x="500" y="160" width="60" height="50" rx="6" fill="#fff"/>
+            <polygon points="500,160 535,135 570,160" fill="#e05b4f"/>
+            <!-- warning icon -->
+            <g transform="translate(420,40)">
+              <polygon points="60,0 120,104 0,104" fill="#ffd055" stroke="#f0b22a" stroke-width="3"/>
+              <rect x="55" y="28" width="10" height="40" fill="#2f2f2f" rx="2"/>
+              <circle cx="60" cy="82" r="6" fill="#2f2f2f"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="container cards-section" id="map">
+      <h3 class="section-title">Peta Rawan Bencana</h3>
+      <div class="cards-grid">
+        <div class="card map-card">
+          <div class="map-placeholder">
+            <!-- simple map-like shapes + pins -->
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet">
+              <rect width="100%" height="100%" rx="10" fill="#eaf6ef"/>
+              <path d="M0 140 Q80 100 160 130 T400 120" fill="none" stroke="#b7e3c9" stroke-width="10" stroke-linecap="round"/>
+              <!-- pins -->
+              <g transform="translate(120,80)">
+                <circle r="12" fill="#ff7a3d"/>
+                <path d="M-6,10 a6,10 0 1,0 12,0 a6,10 0 1,0 -12,0" fill="#ff7a3d"/>
+              </g>
+              <g transform="translate(260,40)">
+                <circle r="10" fill="#ff7a3d"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="card map-card small">
+          <svg viewBox="0 0 320 160" preserveAspectRatio="xMidYMid meet">
+            <rect width="100%" height="100%" rx="10" fill="#f5fcff"/>
+            <path d="M10 90 Q60 40 160 90 T310 70" stroke="#d8f0ff" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <g transform="translate(60,50)"><circle r="10" fill="#ff7a3d"/></g>
+            <g transform="translate(210,90)"><circle r="10" fill="#ff7a3d"/></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="container two-col" id="edu">
+      <div class="left">
+        <h3 class="section-title">Lapor Bencana</h3>
+        <div class="report-box" id="reportBox">
+          <form id="reportForm">
+            <label for="name">Nama</label>
+            <input id="name" name="name" placeholder="Nama Anda" required />
+
+            <label for="desc">Deskripsi</label>
+            <textarea id="desc" name="desc" rows="4" placeholder="Jelaskan situasi (lokasi, jenis bencana, kondisi sekarang)" required></textarea>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary wide">KIRIM LAPORAN</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <aside class="right">
+        <h3 class="section-title">Edukasi & Pelatihan</h3>
+        <div class="edu-list">
+          <article class="edu-item">
+            <div class="edu-thumb">
+              <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+                <rect x="6" y="18" width="60" height="36" rx="6" fill="#fff3e6" stroke="#ffd1a3"></rect>
+                <path d="M18 30 L36 24 L54 30" stroke="#f08a5e" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="edu-text">
+              <h4>Apa yang harus dilakukan saat gempa</h4>
+              <p class="muted">Bersama mendarat setura posken</p>
+            </div>
+          </article>
+
+          <article class="edu-item">
+            <div class="edu-thumb">
+              <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+                <rect x="6" y="10" width="60" height="52" rx="8" fill="#eef6ff" stroke="#c7e0ff"></rect>
+                <path d="M20 46 L36 30 L52 46" stroke="#5b9eff" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="edu-text">
+              <h4>Simulasi Evakuasi Banjir</h4>
+              <p class="muted">Rencana menieraprafir</p>
+            </div>
+          </article>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sistem Mitigasi Bencana Desa — dibuat untuk demo.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
